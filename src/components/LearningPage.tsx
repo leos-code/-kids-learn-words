@@ -185,20 +185,23 @@ export const LearningPage = ({ onBack }: LearningPageProps) => {
             gap: 2,
             position: 'relative'
           }}>
-            <Typography
-              variant="h1"
+            <Typography 
+              variant="h1" 
               component="div"
-              onClick={() => speak(currentChar.char)}
-              sx={{
+              sx={{ 
                 fontFamily: 'font-kids',
-                fontSize: '8rem',
+                fontSize: { xs: '6rem', sm: '8rem', md: '10rem' },
+                fontWeight: 700,
+                lineHeight: 1.2,
+                textAlign: 'center',
+                mb: 2,
                 cursor: 'pointer',
-                userSelect: 'none',
-                transition: 'transform 0.2s',
                 '&:hover': {
-                  transform: 'scale(1.1)',
+                  transform: 'scale(1.05)',
+                  transition: 'transform 0.3s ease'
                 }
               }}
+              onClick={() => speak(currentChar.char)}
             >
               {currentChar.char}
             </Typography>
