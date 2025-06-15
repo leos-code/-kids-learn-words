@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-background min-h-screen m-0;
+    user-select: none;
+  }
+}
+
+@layer components {
+  .character-display {
+    @apply text-character font-kids text-center select-none;
+  }
+  
+  .nav-button {
+    @apply w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center;
+  }
+  
+  .speaker-button {
+    @apply w-12 h-12 min-w-[48px] min-h-[48px] rounded-full flex items-center justify-center;
+  }
+}
+
+/* 移除所有默认样式，只保留 Tailwind 相关配置 */
