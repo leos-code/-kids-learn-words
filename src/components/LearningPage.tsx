@@ -75,7 +75,7 @@ export const LearningPage = ({ onBack }: LearningPageProps) => {
       
       const utterance = new SpeechSynthesisUtterance(fullText);
       utterance.lang = 'zh-CN';
-      utterance.rate = 0.7;
+      utterance.rate = 0.4;
       
       utterance.onend = () => {
         setIsSpeaking(false);
